@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(188, 188, 224);
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            animation-name: rot;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+        .box{
+            display: flex;
+        }
+        @keyframes rot{
+            from{
+                transform: rotate(0deg);
+               
+            }
+            to{
+                transform: rotate(720deg);
+                height: 200px;
+            width: 200px;
+                
+            }
+        }
+        .btn{
+            height: 100px;
+            width: 200px;
+          background-color: rgb(106, 14, 59);
+          color: white;
+          font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<center><button class="btn" id="btn" onclick="abuse()">Who i am</button><div class="box"><div id="root"></div></div></center>
+
+</body>
+<script>
+   function abuse(){
+    var i=0;
+    while(i<100){
+        var obj1=document.createElement("img");
+     obj1.src="image.jpg";
+
+    document.getElementById("btn").innerHTML="Dont Do overaction ok!"
+    document.getElementById("root").appendChild(obj1);
+    i+=1;
+    }
+   }
+
+
+</script>
+</html>
